@@ -8,6 +8,7 @@
 2. Restore `DVLD.bak` database file in MSSQL Server.
 3. Run Visual Studio 2022.
 4. Build the project.
+5. Use 'Foo' as the user name, '123' as the password.
 
 ---
 1. **Technologies:**
