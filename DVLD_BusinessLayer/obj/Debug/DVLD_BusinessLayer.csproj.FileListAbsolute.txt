@@ -1,0 +1,9 @@
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\bin\Debug\DVLD_BusinessLayer.dll
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\bin\Debug\DVLD_BusinessLayer.pdb
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\bin\Debug\DVLD_AccessLayer.dll
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\bin\Debug\DVLD_AccessLayer.pdb
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.AssemblyReference.cache
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\obj\Debug\DVLD_Bus.693E2707.Up2Date
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.dll
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.pdb

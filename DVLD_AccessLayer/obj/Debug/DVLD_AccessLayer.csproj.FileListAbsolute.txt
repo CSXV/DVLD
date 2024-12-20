@@ -1,0 +1,6 @@
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_AccessLayer\bin\Debug\DVLD_AccessLayer.dll
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_AccessLayer\bin\Debug\DVLD_AccessLayer.pdb
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_AccessLayer\obj\Debug\DVLD_AccessLayer.csproj.AssemblyReference.cache
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_AccessLayer\obj\Debug\DVLD_AccessLayer.csproj.CoreCompileInputs.cache
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_AccessLayer\obj\Debug\DVLD_AccessLayer.dll
+C:\MALIK DISC\M'X\Coding\DotNet\My Projects\DVLD_Project\DVLD_AccessLayer\obj\Debug\DVLD_AccessLayer.pdb

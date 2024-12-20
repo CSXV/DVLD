@@ -1,0 +1,112 @@
+﻿using DVLD_BusinessLayer;
+using DVLD_Form.Forms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DVLD_Form.Controls
+{
+  public partial class cntrlVisionTestAppointment : UserControl
+  {
+    private clsLocalDrivingLicense _LDL;
+    private clsApplications _Application;
+    private clsPerson _Person;
+    private clsUser _User;
+    private int _LDLID;
+
+    public cntrlVisionTestAppointment() { InitializeComponent(); }
+
+    public void setLDLID(int LDLID) { _LDLID = LDLID; }
+
+    public void UpdateControl() { _LoadData(); }
+
+    /*public static void setPersonID(int PersonID) {*/
+    /*  if (clsPerson.IsPersonExist(_PersonID)) {*/
+    /*    _Person = clsPerson.Find(PersonID);*/
+    /*  } else {*/
+    /*    MessageBox.Show("this form will close");*/
+    /*  }*/
+    /*}*/
+
+    private void cntrlVisionTestAppointment_Load(object sender, EventArgs e)
+    {
+      _LoadData();
+    }
+
+    private void _LoadUser()
+    {
+      _User = clsUser.Find(_Application.CreatedByUserID);
+    }
+
+    private void _LoadPerson()
+    {
+      _Person = clsPerson.Find(_Application.ApplicationPersonID);
+    }
+
+    private void _LoadLicense() { _LDL = clsLocalDrivingLicense.Find(_LDLID); }
+
+    private void _LoadApplication()
+    {
+      _Application = clsApplications.Find(_LDL.ApplicationID);
+    }
+
+    private void _LoadData()
+    {
+      _LoadLicense();
+
+      if (_LDL == null)
+      {
+        MessageBox.Show("this form will now close");
+        return;
+      }
+
+      _LoadApplication();
+      _LoadUser();
+      _LoadPerson();
+
+      lbDLAID.Text = _LDL.LocalDrivingLicenseApplicationID.ToString();
+      lbAppliedForLicense.Text = _LDL.LicenseClassID.ToString();
+      /*lbPassedTests.Text = _Application;*/
+
+      lbAppID.Text = _Application.ApplicationID.ToString();
+
+      switch (_Application.ApplicationStatus)
+      {
+        case 1:
+          lbAppStatus.Text = "New";
+          break;
+        case 2:
+          lbAppStatus.Text = "Cancelled";
+          break;
+        case 3:
+          lbAppStatus.Text = "Completed";
+          break;
+      }
+
+      lbAppFees.Text = 15.ToString();
+      lbAppType.Text = _Application.ApplicationTypeID.ToString();
+      lbAppDate.Text = _Application.ApplicationDate.ToString();
+      lbAppStatusDate.Text = _Application.LastStautsDate.ToString();
+
+      lbAppApplicant.Text = _Person.FullName();
+      lbAppCreatedBy.Text = _User.UserName;
+    }
+
+    private void llViewPersonInfo_LinkClicked(object sender,
+                                              LinkLabelLinkClickedEventArgs e)
+    {
+      PersonInfo info = new PersonInfo(_Person.PersonID);
+      info.ShowDialog();
+    }
+
+    private void lbShowLicenseInfo_LinkClicked(object sender,
+                                               LinkLabelLinkClickedEventArgs e)
+    { }
+  }
+}

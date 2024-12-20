@@ -1,0 +1,67 @@
+﻿using System;
+using System.Windows.Forms;
+using DVLD_BusinessLayer;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DVLD_Form.Forms.Applications
+{
+  public partial class LocalLicensesForm : Form
+  {
+    private BindingSource _source = new BindingSource();
+
+    public LocalLicensesForm() { InitializeComponent(); }
+
+    private void _LoadLocalLicenseApp()
+    {
+      _source.DataSource =
+          clsLocalDrivingLicense.GetAllLocalDrivingLicenseApplication();
+      dataGridView1.DataSource = _source;
+    }
+
+    private void LocalLicensesForm_Load(object sender, EventArgs e)
+    {
+      _LoadLocalLicenseApp();
+    }
+
+    private void pbAdd_Click(object sender, EventArgs e) { }
+
+    private void cbFilter_SelectedIndexChanged(object sender, EventArgs e) { }
+
+    private void tbFilter_TextChanged(object sender, EventArgs e) { }
+
+    private void tbFilter_KeyPress(object sender, KeyPressEventArgs e) { }
+
+    private void showApplicationDetailsToolStripMenuItem_Click(object sender,
+                                                               EventArgs e)
+    { }
+
+    private void editApplicationToolStripMenuItem_Click(object sender,
+                                                        EventArgs e)
+    { }
+
+    private void deleteApplicationToolStripMenuItem_Click(object sender,
+                                                          EventArgs e)
+    { }
+
+    private void cancelApplicationToolStripMenuItem_Click(object sender,
+                                                          EventArgs e)
+    { }
+
+    private void showPersonLiToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+    }
+
+    private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e) { }
+
+    private void
+    issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender,
+                                                        EventArgs e)
+    { }
+  }
+}

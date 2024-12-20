@@ -1,0 +1,80 @@
+﻿using DVLD_BusinessLayer;
+using DVLD_Form.Forms;
+using DVLD_Form.Forms.Applications;
+using DVLD_Form.Forms.Tests;
+using DVLD_Form.Forms.Users;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DVLD_Form {
+  public partial class MainForm : Form {
+    private clsUser _logedInUser;
+
+    public MainForm(clsUser thisuser) {
+      _logedInUser = thisuser;
+
+      InitializeComponent();
+    }
+
+    private void peopleToolStripMenuItem_Click(object sender, EventArgs e) {
+      PeopleFrom peopleFrom = new PeopleFrom();
+      peopleFrom.ShowDialog();
+      peopleFrom.Close();
+    }
+
+    private void applicationsToolStripMenuItem_Click(object sender, EventArgs e) {
+      applicationsToolStripMenuItem.ShowDropDown();
+    }
+
+    private void driversToolStripMenuItem_Click(object sender, EventArgs e) {
+      MessageBox.Show("To be implemented");
+    }
+
+    private void usersToolStripMenuItem_Click(object sender, EventArgs e) {
+      UsersForm usersForm = new UsersForm();
+      usersForm.ShowDialog();
+      usersForm.Close();
+    }
+
+    private void accountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      accountSettingsToolStripMenuItem.ShowDropDown();
+    }
+
+    private void stmCurrentUserInfo_Click(object sender, EventArgs e) {
+      ShowUserInfo info = new ShowUserInfo(_logedInUser.UserID);
+      info.ShowDialog();
+    }
+
+    private void stiChangePassword_Click(object sender, EventArgs e) {
+      ChangeUserPasswordForm change =
+          new ChangeUserPasswordForm(_logedInUser.UserID);
+      change.ShowDialog();
+    }
+
+    private void stiLogOut_Click(object sender, EventArgs e) { this.Close(); }
+
+    private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e) {
+      AppTypesForm app = new AppTypesForm();
+      app.ShowDialog();
+    }
+
+    private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e) {
+      TestTypesForm test = new TestTypesForm();
+      test.ShowDialog();
+    }
+
+    private void
+    localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e) {
+      LocalLicensesForm locallicense = new LocalLicensesForm();
+      locallicense.ShowDialog();
+    }
+  }
+}
