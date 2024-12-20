@@ -1,6 +1,6 @@
 # Driving & Vehicle License Department System
 
-![[Pics/DVLD_Screenshot.png]]
+![Screenshot](Pics/DVLD_Screenshot.png)
 
 1. **Technologies:**
 	1. .NET Framework.
