@@ -5,7 +5,7 @@
 ---
 ## How to use
 1. Clone this repo.
-2. Restore 'DVLD.bak' database file in MSSQL Server.
+2. Restore `DVLD.bak` database file in MSSQL Server.
 3. Run Visual Studio 2022.
 4. Build the project.
 
